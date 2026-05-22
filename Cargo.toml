@@ -1,0 +1,15 @@
+[package]
+name = "ccp-fixture-rust-env"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "ccp-fixture-rust-env"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
